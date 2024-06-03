@@ -40,6 +40,7 @@ function App() {
 
 
   return (
+    
     <div className="w-full max-w-md mx-auto shadow-md 
     rounded-lg px-6 py-4 my-10 bg-pink-400
     text-black-500 ">
