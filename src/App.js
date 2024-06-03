@@ -10,6 +10,7 @@ function App() {
   //useRef hook for optimizing copy button 
   const passwordRef = useRef(null)
 
+  // usecallback hook with funnction and dependencies
   const passwordGenerator = useCallback(() => {
     let pass = ""
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -22,9 +23,11 @@ function App() {
     }
 
     setPassword(pass)
-
+// passing all the dependencies 
   }, [length, numberAllowed, charAllowed, setPassword])
 
+
+  // for optimizing copy hover button
   const copyPasswordToClipboard = useCallback(() => {
     passwordRef.current?.select();
     passwordRef.current?.setSelectionRange(0, 3);
